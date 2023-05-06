@@ -1,5 +1,6 @@
 import { HttpMethod, getUrl } from '@common';
 import { Token } from '@interfaces';
+import { ControllerAuth } from './controller-auth';
 
 /**
  * ### Запрос обновления токенов
@@ -9,7 +10,7 @@ import { Token } from '@interfaces';
  */
 export namespace RefreshTokens {
     /** Базовый URL */
-    export const controllerUrl = 'auth';
+    export const controllerUrl = ControllerAuth.path;
     /** Требуется ли токен в запросе */
     export const auth = false;
     /** Путь запроса */

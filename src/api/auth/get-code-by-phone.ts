@@ -1,5 +1,6 @@
 import { HttpMethod, getUrl } from '@common';
 import { LoginPhoneDto } from '@dto';
+import { ControllerAuth } from './controller-auth';
 
 /**
  * ### Отправка запроса на получение кода
@@ -9,7 +10,7 @@ import { LoginPhoneDto } from '@dto';
  */
 export namespace RegisterPhone {
     /** Базовый URL */
-    export const controllerUrl = 'auth';
+    export const controllerUrl = ControllerAuth.path;
     /** Требуется ли токен в запросе */
     export const auth = false;
     /** Путь запроса */

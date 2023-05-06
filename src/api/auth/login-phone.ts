@@ -1,6 +1,7 @@
 import { HttpMethod, getUrl } from '@common';
 import { LoginPhoneDto } from '@dto';
 import { Token } from '@interfaces';
+import { ControllerAuth } from './controller-auth';
 
 /**
  * ### Запрос авторизации phone + code
@@ -10,7 +11,7 @@ import { Token } from '@interfaces';
  */
 export namespace LoginPhone {
     /** Базовый URL */
-    export const controllerUrl = 'auth';
+    export const controllerUrl = ControllerAuth.path;
     /** Требуется ли токен в запросе */
     export const auth = false;
     /** Путь запроса */

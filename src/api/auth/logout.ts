@@ -1,4 +1,5 @@
 import { HttpMethod, getUrl } from '@common';
+import { ControllerAuth } from './controller-auth';
 
 /**
  * ### Выход
@@ -9,7 +10,7 @@ import { HttpMethod, getUrl } from '@common';
  */
 export namespace Logout {
     /** Базовый URL */
-    export const controllerUrl = 'auth';
+    export const controllerUrl = ControllerAuth.path;
     /** Требуется ли токен в запросе */
     export const auth = false;
     /** Путь запроса */

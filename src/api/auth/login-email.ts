@@ -1,6 +1,7 @@
 import { HttpMethod, getUrl } from '@common';
 import { LoginEmailDto } from '@dto';
 import { Token } from '@interfaces';
+import { ControllerAuth } from './controller-auth';
 
 /**
  * ### Запрос авторизации email + пароль
@@ -10,7 +11,7 @@ import { Token } from '@interfaces';
  */
 export namespace LoginEmail {
     /** Базовый URL */
-    export const controllerUrl = 'auth';
+    export const controllerUrl = ControllerAuth.path;
     /** Требуется ли токен в запросе */
     export const auth = false;
     /** Путь запроса */
