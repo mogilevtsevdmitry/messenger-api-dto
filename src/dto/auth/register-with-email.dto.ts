@@ -6,7 +6,7 @@ import { IsEmail, IsNotEmpty, IsString, MinLength, Validate } from 'class-valida
 /**
  * Регистрация пользователя с помощью email и пароля с подтверждением
  */
-export class RegisterEmailDto {
+export class RegisterWithEmailDto {
     /**
      * Email пользователя
      */
