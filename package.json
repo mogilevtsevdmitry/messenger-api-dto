@@ -4,7 +4,8 @@
   "description": "API for noname messenger api",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint \"{src}/**/*.ts\" --fix",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,9 @@
     "api",
     "dto"
   ],
+  "publishConfig": {
+      "access": "public"
+  },
   "author": "Mogilevtsev Dmitry <webmogilevtsev@yandex.ru>",
   "license": "ISC",
   "devDependencies": {
