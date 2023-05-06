@@ -1,5 +1,5 @@
 {
-  "name": "messenger-api-dto",
+  "name": "@webmogilevtsev/messenger-api-dto",
   "version": "1.0.0",
   "description": "API for noname messenger api",
   "main": "dist/index.js",
