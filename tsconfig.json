@@ -17,19 +17,5 @@
         "strictBindCallApply": false,
         "forceConsistentCasingInFileNames": false,
         "noFallthroughCasesInSwitch": false,
-        "paths": {
-            "@common": ["src/common"],
-            "@common/*": ["src/common/*"],
-            "@api": ["src/api"],
-            "@api/*": ["src/api/*"],
-            "@dto": ["src/dto"],
-            "@dto/*": ["src/dto/*"],
-            "@responses": ["src/responses"],
-            "@responses/*": ["src/responses/*"],
-            "@interfaces": ["src/interfaces"],
-            "@interfaces/*": ["src/interfaces/*"],
-            "@services": ["src/services"],
-            "@services/*": ["src/services/*"]
-        }
     }
 }

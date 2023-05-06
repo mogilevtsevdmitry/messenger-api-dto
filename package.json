@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "postinstall": "npm run build",
-    "lint": "eslint \"{src}/**/*.ts\" --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint \"src/**/*.ts\" --fix",
     "build": "tsc"
   },
   "repository": {
