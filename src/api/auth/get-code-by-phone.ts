@@ -1,6 +1,7 @@
 import { HttpMethod, getUrl } from '@common';
-import { LoginPhoneDto } from '@dto';
-import { ControllerAuth } from './controller-auth';
+import { RegisterWithPhoneDto } from '@dto';
+import { AuthContract } from './auth.contract';
+import { RegisterWithPhoneResponse } from '@responses';
 
 /**
  * ### Отправка запроса на получение кода
@@ -9,21 +10,16 @@ import { ControllerAuth } from './controller-auth';
  * method: POST
  */
 export namespace RegisterPhone {
-    /** Базовый URL */
-    export const controllerUrl = ControllerAuth.path;
-    /** Требуется ли токен в запросе */
+    /** Требуется ли авторизация для запроса */
     export const auth = false;
     /** Путь запроса */
-    export const urlPath = 'phone/code';
+    export const methodPath = 'phone/code';
     /** Полный URL запроса */
-    export const url = (): string => getUrl(controllerUrl, urlPath);
+    export const url = (): string => getUrl(AuthContract.path, methodPath);
     /** Метод запроса */
     export const method = HttpMethod.POST;
     /** Тело запроса */
-    export type RequestBody = {
-        /** Телефонный номер */
-        phone: LoginPhoneDto['phone'];
-    };
+    export class Request extends RegisterWithPhoneDto {}
     /** Ответ на запрос */
-    export type Response = null;
+    export class Response extends RegisterWithPhoneResponse {}
 }

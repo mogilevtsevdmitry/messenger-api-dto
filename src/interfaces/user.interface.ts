@@ -1,5 +1,3 @@
-import { Token } from './token.interface';
-
 /**
  * Интерфейс пользователя
  */
@@ -47,5 +45,5 @@ export interface User {
     password: string;
 
     /** Массив токенов пользователя */
-    token: Token['token'][];
+    token: string[];
 }

@@ -1,5 +1,6 @@
 import { HttpMethod, getUrl } from '@common';
-import { ControllerAuth } from './controller-auth';
+import { LogoutResponse } from '@responses';
+import { AuthContract } from './auth.contract';
 
 /**
  * ### Выход
@@ -9,21 +10,16 @@ import { ControllerAuth } from './controller-auth';
  * method: POST
  */
 export namespace Logout {
-    /** Базовый URL */
-    export const controllerUrl = ControllerAuth.path;
     /** Требуется ли токен в запросе */
-    export const auth = false;
+    export const auth = true;
     /** Путь запроса */
     export const urlPath = 'logout';
     /** Полный URL запроса */
-    export const url = (): string => getUrl(controllerUrl, urlPath);
+    export const url = (): string => getUrl(AuthContract.path, urlPath);
     /** Метод запроса */
     export const method = HttpMethod.POST;
     /** Тело запроса */
     export type RequestBody = {};
     /** Ответ на запрос */
-    export type Response = {
-        /** Результат выполнения */
-        result: boolean;
-    };
+    export class Response extends LogoutResponse {}
 }

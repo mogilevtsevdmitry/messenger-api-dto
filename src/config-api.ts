@@ -1,24 +1,4 @@
-interface ConfigApi {
-    /** Строка подключения API */
-    url: string | null;
-}
-
-enum ConfigType {
-    /** DEV окружение */
-    DEV = 'dev',
-    /** PROD окружение */
-    PROD = 'prod',
-}
-
-const config_api: Record<ConfigType, ConfigApi> = {
-    /** DEV API */
-    [ConfigType.DEV]: { url: 'https://unknown-messenger.ru/api/' },
-    /**
-     * PROD API
-     *
-     * @deprecated
-     */
-    [ConfigType.PROD]: { url: null },
+export const API = {
+    /** Корневой URL для отправки API запросов */
+    BaseUrl: 'https://unknown-messenger.ru/api/',
 };
-
-export default config_api;

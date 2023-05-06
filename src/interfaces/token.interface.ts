@@ -1,5 +1,3 @@
-import { User } from './user.interface';
-
 /** Интерфейс для модели Token */
 export interface Token {
     /** Уникальный токен */
@@ -9,5 +7,5 @@ export interface Token {
     exp: Date;
 
     /** Идентификатор пользователя, которому принадлежит токен */
-    userId: User['id'];
+    userId: string;
 }

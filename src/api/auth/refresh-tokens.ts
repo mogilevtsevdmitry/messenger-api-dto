@@ -1,29 +1,24 @@
 import { HttpMethod, getUrl } from '@common';
-import { Token } from '@interfaces';
-import { ControllerAuth } from './controller-auth';
+import { LoginResponse } from '@responses';
+import { AuthContract } from './auth.contract';
 
 /**
- * ### Запрос обновления токенов
+ * ### Запрос на обновление токенов
  *
  * path: /auth/refresh-tokens
  * method: POST
  */
 export namespace RefreshTokens {
-    /** Базовый URL */
-    export const controllerUrl = ControllerAuth.path;
     /** Требуется ли токен в запросе */
-    export const auth = false;
+    export const auth = true;
     /** Путь запроса */
-    export const urlPath = 'refresh-tokens';
+    export const methodPath = 'refresh-tokens';
     /** Полный URL запроса */
-    export const url = (): string => getUrl(controllerUrl, urlPath);
+    export const url = (): string => getUrl(AuthContract.path, methodPath);
     /** Метод запроса */
     export const method = HttpMethod.POST;
     /** Тело запроса */
-    export type RequestBody = {};
+    export type Request = {};
     /** Ответ на запрос */
-    export type Response = {
-        /** Уникальный Bearer JWT токен */
-        accessToken: Token['token'];
-    };
+    export class Response extends LoginResponse {}
 }

@@ -5,7 +5,7 @@ import { IsEmail, IsString, MinLength } from 'class-validator';
 /**
  * Авторизация с помощью email и пароля
  */
-export class LoginEmailDto {
+export class LoginWithEmailDto {
     /**
      * Email пользователя
      */

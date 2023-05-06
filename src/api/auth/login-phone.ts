@@ -1,7 +1,7 @@
 import { HttpMethod, getUrl } from '@common';
 import { LoginPhoneDto } from '@dto';
-import { Token } from '@interfaces';
-import { ControllerAuth } from './controller-auth';
+import { LoginResponse } from '@responses';
+import { AuthContract } from './auth.contract';
 
 /**
  * ### Запрос авторизации phone + code
@@ -10,21 +10,16 @@ import { ControllerAuth } from './controller-auth';
  * method: POST
  */
 export namespace LoginPhone {
-    /** Базовый URL */
-    export const controllerUrl = ControllerAuth.path;
     /** Требуется ли токен в запросе */
     export const auth = false;
     /** Путь запроса */
-    export const urlPath = 'login/phone';
+    export const methodPath = 'login/phone';
     /** Полный URL запроса */
-    export const url = (): string => getUrl(controllerUrl, urlPath);
+    export const url = (): string => getUrl(AuthContract.path, methodPath);
     /** Метод запроса */
     export const method = HttpMethod.POST;
     /** Тело запроса */
-    export type RequestBody = LoginPhoneDto;
+    export class RequestBody extends LoginPhoneDto {}
     /** Ответ на запрос */
-    export type Response = {
-        /** Уникальный Bearer JWT токен */
-        accessToken: Token['token'];
-    };
+    export class Response extends LoginResponse {}
 }

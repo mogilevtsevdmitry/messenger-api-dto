@@ -1,7 +1,7 @@
 import { HttpMethod, getUrl } from '@common';
 import { RegisterEmailDto } from '@dto';
-import { Token } from '@interfaces';
-import { ControllerAuth } from './controller-auth';
+import { RegisterWithPhoneResponse } from '@responses';
+import { AuthContract } from './auth.contract';
 
 /**
  * ### Запрос регистрации через email и пароль
@@ -9,22 +9,17 @@ import { ControllerAuth } from './controller-auth';
  * path: /auth/register/email
  * method: POST
  */
-export namespace RegisterEmail {
-    /** Базовый URL */
-    export const controllerUrl = ControllerAuth.path;
+export namespace RegisterWithEmail {
     /** Требуется ли токен в запросе */
     export const auth = false;
     /** Путь запроса */
-    export const urlPath = 'register/email';
+    export const methodPath = 'register/email';
     /** Полный URL запроса */
-    export const url = (): string => getUrl(controllerUrl, urlPath);
+    export const url = (): string => getUrl(AuthContract.path, methodPath);
     /** Метод запроса */
     export const method = HttpMethod.POST;
     /** Тело запроса */
-    export type RequestBody = RegisterEmailDto;
+    export class Request extends RegisterEmailDto {}
     /** Ответ на запрос */
-    export type Response = {
-        /** Уникальный Bearer JWT токен */
-        accessToken: Token['token'];
-    };
+    export class Response extends RegisterWithPhoneResponse {}
 }
