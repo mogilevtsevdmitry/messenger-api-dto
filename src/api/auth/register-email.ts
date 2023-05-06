@@ -1,6 +1,6 @@
 import { HttpMethod, getUrl } from '@common';
 import { RegisterWithEmailDto } from '@dto';
-import { RegisterWithPhoneResponse } from '@responses';
+import { RegisterResponse } from '@responses';
 import { AuthContract } from './auth.contract';
 
 /**
@@ -21,5 +21,5 @@ export namespace RegisterWithEmail {
     /** Тело запроса */
     export class Request extends RegisterWithEmailDto {}
     /** Ответ на запрос */
-    export class Response extends RegisterWithPhoneResponse {}
+    export class Response extends RegisterResponse {}
 }

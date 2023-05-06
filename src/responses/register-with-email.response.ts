@@ -3,7 +3,7 @@ import { ApiProperty } from '@nestjs/swagger';
 /**
  * Результат выполнения запроса регистрации через телефон
  */
-export class RegisterWithPhoneResponse {
+export class RegisterResponse {
     /** Результат выполнения запроса регистрации через телефон */
     @ApiProperty({
         type: Boolean,

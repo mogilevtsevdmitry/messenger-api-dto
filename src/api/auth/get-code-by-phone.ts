@@ -1,7 +1,7 @@
 import { HttpMethod, getUrl } from '@common';
 import { RegisterWithPhoneDto } from '@dto';
 import { AuthContract } from './auth.contract';
-import { RegisterWithPhoneResponse } from '@responses';
+import { RegisterResponse } from '@responses';
 
 /**
  * ### Отправка запроса на получение кода
@@ -21,5 +21,5 @@ export namespace RegisterPhone {
     /** Тело запроса */
     export class Request extends RegisterWithPhoneDto {}
     /** Ответ на запрос */
-    export class Response extends RegisterWithPhoneResponse {}
+    export class Response extends RegisterResponse {}
 }
