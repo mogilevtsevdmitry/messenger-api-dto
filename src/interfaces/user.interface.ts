@@ -46,4 +46,7 @@ export interface User {
 
     /** Массив токенов пользователя */
     token: string[];
+
+    /** Роли пользователя */
+    roles: string[];
 }
