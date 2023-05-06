@@ -1,6 +1,6 @@
-import { HttpMethod, getUrl } from '@common';
-import { LoginPhoneDto } from '@dto';
-import { LoginResponse } from '@responses';
+import { getUrl, HttpMethod } from '../../common';
+import { LoginPhoneDto } from '../../dto';
+import { LoginResponse } from '../../responses';
 import { AuthContract } from './auth.contract';
 
 /**

@@ -1,4 +1,4 @@
-import { IsPasswordsMatchingConstraint } from '@common';
+import { IsPasswordsMatchingConstraint } from '../../common';
 import { faker } from '@faker-js/faker';
 import { ApiProperty } from '@nestjs/swagger';
 import { IsEmail, IsNotEmpty, IsString, MinLength, Validate } from 'class-validator';

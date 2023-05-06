@@ -1,5 +1,5 @@
-import { HttpMethod, getUrl } from '@common';
-import { LoginResponse } from '@responses';
+import { getUrl, HttpMethod } from '../../common';
+import { LoginResponse } from '../../responses';
 import { AuthContract } from './auth.contract';
 
 /**

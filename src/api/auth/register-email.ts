@@ -1,6 +1,6 @@
-import { HttpMethod, getUrl } from '@common';
-import { RegisterWithEmailDto } from '@dto';
-import { RegisterResponse } from '@responses';
+import { getUrl, HttpMethod } from '../../common';
+import { RegisterWithEmailDto } from '../../dto';
+import { RegisterResponse } from '../../responses';
 import { AuthContract } from './auth.contract';
 
 /**

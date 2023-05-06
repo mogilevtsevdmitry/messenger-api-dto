@@ -1,4 +1,4 @@
-import { LoginWithEmail, RefreshTokens, RegisterWithEmail } from '@api';
+import { LoginWithEmail, RefreshTokens, RegisterWithEmail } from '../../api';
 
 /**
  * ### Controller Auth сервиса

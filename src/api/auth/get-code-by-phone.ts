@@ -1,7 +1,7 @@
-import { HttpMethod, getUrl } from '@common';
-import { RegisterWithPhoneDto } from '@dto';
+import { getUrl, HttpMethod } from '../../common';
+import { RegisterWithPhoneDto } from '../../dto';
+import { RegisterResponse } from '../../responses';
 import { AuthContract } from './auth.contract';
-import { RegisterResponse } from '@responses';
 
 /**
  * ### Отправка запроса на получение кода
